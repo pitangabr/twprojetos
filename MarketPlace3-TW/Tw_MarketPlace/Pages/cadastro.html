@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Css/cadastro.css">
+    <link rel="stylesheet" href="../Css/body.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <section id="acessibilidade">
+                <!--Barra de acessibilidade-->
+                <ul class="barra">
+                    <li><a href="#">Acessibilidade</a></li>
+                    <li><a href="#">A-</a></li>
+                    <li><a href="#">A+</a></li>
+                    <li><a href="#">Modo Noturno</a></li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <!--Fim barra de acessibilidade-->
+
+    <main>
+        <section id="background">
+            <!-- Parte principal do corpo do site -->
+            <div class="sessao">
+                <!-- Sessão definida para dividir o campo de login -->
+                <div class="campo1">
+                    <!-- Div definida para formatar o campo de login -->
+                    <h1 class="h1topo"> Crie sua conta na</h1>
+                    <div class="logo_twc">
+                        <img src="../imagens/logo.png" alt="">
+                        <!-- Div para imagem dentro do campo de login -->
+                    </div>
+                    <form id="formulario">
+                        <!-- Tag criada para criar formulário -->
+                        <input type="text" name="tNome" id="iNome" placeholder="Nome" size="15" maxlength="20"
+                            required="required"> <!-- Input criado para usuário inserir o nome para acesso -->
+                        <input type="text" name="tEmail" id="iEmail" placeholder="Email" size="15" maxlength="20"
+                            required="required"> <!-- Input criado para usuário inserir o email para acesso -->
+                        <input type="text" name="tSenha" placeholder="Senha" size="15" maxlength="20"
+                            required="required"> <!-- Input criado para usuário inserir senha dde acesso -->
+                        <input type="text" name="tCSenha" placeholder="Confirmar Senha" size="15" maxlength="20"
+                            required="required"> <!-- Input criado para usuário inserir senha dde acesso -->
+                    </form>
+                    <div class="check2">
+                        <input type="checkbox" id="scales" name="scale">
+                        <label for="scales">Aceito receber novidades do TWMarketPlace</label>
+                    </div>
+
+                    <div class="criar_conta">
+                        <a href="#">Criar Conta</a>
+                    </div>
+                    <div class="termo">
+                        <p>Ao clicar em criar conta, você está de acordo com os termos de serviço do TWMarketplace.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,1790 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    Font-size: 16px;
+}
+
+main{
+    height: 100vh;
+}
+
+
+
+#barra_acessibilidade {
+    background: #1d2671;
+    width: 99.9vw;
+    height: 5.125vh;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#barra_acessibilidade_home {
+    background: #1d2671;
+    width: 98.9vw;
+    height: 5.125vh;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#barra_acessibilidade ul {
+    list-style: none;
+    display: flex;
+    font-size: 0.9375em;
+    margin-right: 1em;
+}
+
+#barra_acessibilidade_home ul {
+    list-style: none;
+    display: flex;
+    font-size: 0.9375em;
+    margin-right: 1em;
+}
+
+#barra_acessibilidade a:hover {
+    color: rgb(0, 183, 255);
+}
+
+#barra_acessibilidade_home a:hover {
+    color: rgb(0, 183, 255);
+}
+
+.barra_conteudo li {
+    margin: 0 0.4375em;
+}
+
+.barra_conteudo a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 0.25em;
+}
+
+.barra_conteudo li:nth-child(2) {
+    border-left: 0.125em solid white;
+    border-right: .125em solid white;
+}
+
+.barra_conteudo li:nth-child(3) {
+    border-left: .125em solid white;
+    border-right: .125em solid white;
+    font-size: 1.0625em;
+}
+
+
+/*--------------------Cabeçalho Home--------------------------*/
+
+.menu {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+#menu_superior {
+    width: 98.9vw;
+    height: 15.25vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    background: white;
+}
+
+.logo img {
+    width: 100vw;
+    max-width: 12em;
+    margin-right: 2em;
+    margin-left: 10.5em;
+    margin-top: 0;
+}
+
+.BarraPesquisa {
+    align-items: center;
+    display: flex;
+    margin-right: 2em;
+}
+
+#formulario_busca {
+    border: solid 0.0625em;
+    border-radius: 0.5em;
+    width: 43.25vw;
+    height: 6.5vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#formulario_busca img {
+    height: 4.5vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 35em;
+}
+
+.input_buscar {
+    width: 36vw;
+    height: 5vh;
+    border: none;
+    justify-content: left;
+    display: flex;
+    margin-left: 2em;
+    font-size: 1.3em;
+}
+
+.icones_compras_mensagem img {
+    width: 95vw;
+    max-width: 2.4125em;
+    margin-right: 1em;
+}
+
+.minhaconta_sair ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+.minhaconta_sair li {
+    margin: auto 2.1em auto auto;
+}
+
+.minhaconta_sair a:hover {
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+
+#lupa {
+    opacity: 0.5;
+}
+
+.botao_minhaconta {
+    background: #f16984;
+    padding: 1em;
+    border-radius: 0.9375em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.botao_sair {
+    text-transform: uppercase;
+    color: #f16984;
+}
+
+
+/*Menu Inferior*/
+.menu_inferior {
+    margin-top: 20em;
+    z-index: 98;
+}
+
+#menu_inferior {
+    width: 98.9vw;
+    height: 19vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-bottom: .5em;
+}
+
+.menu_inferior_home {
+    margin-top: 5.99em;
+}
+
+#menu_inferior ul {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5em;
+    margin-left: 1.3em;
+}
+
+#menu_inferior li {
+    list-style: none;
+    margin: 0.75em;
+}
+
+#menu_inferior p {
+    text-align: center;
+    margin: auto 0.125em;
+    margin-top: .25em;
+    font-weight: bolder;
+}
+
+#menu_inferior a {
+    text-decoration: none;
+    color: rgb(32, 31, 31);
+}
+
+#menu_inferior a:hover {
+    color: #1d2671;
+}
+
+.lista_categorias {
+    width: 95vw;
+    max-width: 5em;
+    border-radius: 6.25em;
+    border: .1em solid #ccc;
+    margin: auto 0.625em;
+}
+
+.lista_categorias img {
+    position: relative;
+    display: inline-block;
+    width: 95vw;
+    max-width: 4.5em;
+    padding: 0.625em;
+    margin: auto 0.125em;
+    margin-left: .19em;
+}
+
+.lista_categorias img:hover {
+    margin-left: .19em;
+}
+
+.lista_categorias .notebooks {
+    display: none;
+    position: absolute;
+    left: 30.15em;
+    top: 10.35em;
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .notebooks {
+    display: inline;
+}
+
+.lista_categorias .smartphones {
+    display: none;
+    position: absolute;
+    left: 38.07em;
+    top: 10.35em;
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .smartphones {
+    display: inline;
+}
+
+.lista_categorias .impressoras {
+    display: none;
+    position: absolute;
+    left: 46.23em;
+    top: 10.35em;
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .impressoras {
+    display: inline;
+}
+
+.lista_categorias .monitores {
+    display: none;
+    position: absolute;
+    left: 54.15em;
+    top: 10.35em;
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .monitores {
+    display: inline;
+}
+
+.lista_categorias .acessorios {
+    display: none;
+    position: absolute;
+    left: 62.06em;
+    top: 10.35em;
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .acessorios {
+    display: inline;
+}
+
+.lista_categorias .todas_as_categorias {
+    display: none;
+    position: absolute;
+    left: 69.99em;
+    top: 10.39em;  
+    margin: auto;
+    z-index: 99;
+}
+
+.lista_categorias:hover .todas_as_categorias {
+    display: inline;
+}
+
+.lista_categorias:hover {
+    background: #f16984;
+    border: none;
+}
+
+
+
+/*-------------------- Cabeçalho Perfil Usuário --------------------*/
+/*-------------------------Perfil Usuário----------------------*/
+.perfilmain {
+    margin-top: 8em;
+}
+
+#menu_superior_perfil {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: .3em;
+    z-index: 99;
+    background-color: white;
+}
+
+.logo1 img {
+    width: 100vw;
+    max-width: 11.5em;
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-top: .3em;
+}
+
+.BarraPesquisa_perfil {
+    align-items: center;
+    display: flex;
+    margin-right: 3em;
+    margin-top: .3em;
+}
+
+#formulario_busca_perfil {
+    border: solid 0.0625em;
+    border-radius: 0.5em;
+    width: 30vw;
+    height: 6.5vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#formulario_busca_perfil img {
+    height: 4.5vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 25em;
+}
+
+.input_buscar_perfil {
+    width: 23vw;
+    height: 5vh;
+    border: none;
+    justify-content: left;
+    display: flex;
+    margin-left: 2em;
+    font-size: 1.3em;
+}
+
+.minhaconta_sair_perfil ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-top: .3em;
+}
+
+.minhaconta_sair_perfil li {
+    margin: auto 2.1em auto auto;
+}
+
+.minhaconta_sair_perfil a:hover {
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+
+.botao_minhaconta_perfil {
+    background: #f16984;
+    padding: 1em;
+    border-radius: 0.9375em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.botao_sair_perfil {
+    text-transform: uppercase;
+    color: #f16984;
+}
+
+
+/*----------------------Rodapé-----------------------*/
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 5em;
+}
+
+.texto_rodape {
+    font-size: 1em;
+    font-style: italic;
+}
+
+.logo_thw {
+    width: 95vw;
+    max-width: 10vw;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------------Perfil Usuário Canto Perfil fixo-----------------------*/
+
+#perfil_lateral {
+    width: 100vw;
+    max-width: 23vw;
+    height: 100vh;
+    position: fixed;
+    border-right: 1px solid #ccc;
+}
+
+#perfil_lateral li {
+    padding: 1.46em 0;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#perfil_lateral li:enabled {
+    background-color: #f16984;
+    color: white;
+}
+
+#perfil_lateral li a {
+    text-transform: uppercase;
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 1.3em 4.9em;
+}
+
+#perfil_lateral li:hover {
+    background-color: #f16984;
+}
+
+#perfil_lateral li:hover a {
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+#perfil_lateral li:focus {
+    background-color: #f0748d;
+}
+
+.foto_perfil {
+    width: 100vw;
+    max-width: 16vw;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.foto_perfil img {
+    width: 100vw;
+    max-width: 15.7vw;
+    border: 2px solid #ccc;
+    border-radius: 10em;
+    margin-top: 0;
+}
+
+.foto_perfil:hover .alterar_foto {
+    opacity: 1;
+}
+
+.foto_perfil h2 {
+    width: 10em;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-radius: 10em;
+}
+
+.foto_perfil a {
+    color: white;
+    text-decoration: none;
+}
+
+.foto_perfil a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+.alterar_foto {
+    padding: 1em 1.35em;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s linear;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 10em;
+    left: 1.2em;
+}
+
+.nome_usuario {
+    font-size: 1.3em;
+    text-align: center;
+    margin: .1em auto;
+    padding: .5em;
+    background-color: rgba(66, 62, 62, 0.548);
+    border: rgba(66, 62, 62, 0.548);
+    border-radius: 2em;
+}
+
+
+
+
+/*-----------------------Perfil usuário----------------------*/
+/*--------------------------Pedidos---------------------------*/
+.meuspedidos_perfil {
+    width: 100vw;
+    max-width: 76vw;
+    height: 5em;
+    position: fixed;
+    left: 22.1em;
+    top: 6.69em;
+    background-color: #1d2571fd;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.meuspedidos_perfil h1 {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 1em;
+}
+
+.meuspedidos_conteudo {
+    width: 100vw;
+    max-width: 75.8vw;
+    height: 100vh;
+    position: absolute;
+    left: 22.1em;
+    top: 11.7em;
+    z-index: 98;
+}
+
+.meuspedidos_conteudo li {
+    border-bottom: 1px solid #ccc;
+    max-width: 75.9vw;
+    padding: 1em;
+    list-style-position: inside;
+}
+
+.meuspedidos_conteudo a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.meuspedidos_conteudo li:hover {
+    background-color: #f16984;
+    list-style-type: square;
+    color: white;
+}
+
+.meuspedidos_conteudo li:hover a {
+    color: white;
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+
+
+/*--------------------Perfil Usuário----------------------*/
+/*------------------------notificação------------------------*/
+
+.notificacao_perfil {
+    width: 100vw;
+    max-width: 75.5vw;
+    height: 5em;
+    position: fixed;
+    left: 22.1em;
+    top: 6.69em;
+    background-color: #1d2571;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.notificacao_perfil h1 {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 1em;
+}
+
+.notificacao_conteudo {
+    width: 100vw;
+    max-width: 75.3vw;
+    height: 100vh;
+    position: absolute;
+    left: 22.1em;
+    top: 11.7em;
+    z-index: 98;
+}
+
+.notificacao_conteudo li {
+    border-bottom: 1px solid #ccc;
+    max-width: 75.5vw;
+    padding: 1em;
+    list-style: inside;
+}
+
+.notificacao_conteudo a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.notificacao_conteudo li:hover {
+    background-color: #f16984;
+    list-style-type: square;
+    color: white;
+}
+
+.notificacao_conteudo li:hover a {
+    color: white;
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+/*--------------------------Página Home----------------------*/
+
+                    /*Home*/
+
+#home_banner{/*começo da seção banner*/
+    padding: 1.1em;
+    display: flex;
+    width: 87em; 
+    height:40em ;
+    margin-bottom: 2em;
+}
+#home_banner img{
+    padding: 1.1em;
+    display: flex;
+     width: 85.375em; 
+    height:40em ;
+    margin-left: 2em;
+    position: relative;
+    left: 2.2em;
+}/*fim da seção banner*/
+.home h2{
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+.home_main{
+    margin: auto;
+    width: 90em;
+    height: 140em;
+    margin-left: 1.25em;                                            
+}
+.hr{/*classe para as hr(linhas horizontais), que ficam no meio da pagina / as hr do meio são menores, por isso dei uma classe para mexer só nelas/ necessario para facilitar no responsivo */
+    margin: 0 auto;
+    width: 80%;
+}
+.conteiner{/*conteiner = Um quadrado que ficam envolta das divs que controlam as imagens/ é uma caixa que quarda outras caixas*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#img1{/*Seção img1 = uma area do site onde os produtos podem ser classificados/ Local onde ficaram os produtos divididos (ex. fotos de varios notebooks)*/
+    padding: 1.1em;
+    display: flex;
+    width: 85.375em; 
+    height:40em ;
+    margin: 3.75em;
+    flex-flow: column;
+    position: relative;
+    left: 3em;
+}
+                    
+.fotos1{/* inicil da classe fotos1*//* classe para controlar as fotos dos produtos/ essa casse controla as 6 fotos menores da home*/
+    position: relative;
+    width: 56.92em;
+    height: 32em;
+}
+.valor{
+    position: relative;
+    right: 13em;
+    bottom: 0.94em;
+    background: #f16984;
+    padding: 0.3em;
+    border-radius: 0.9375em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+}/* fim da classe fotos1*/
+                    
+#img2{/*Seção img2 = uma area do site onde os produtos podem ser classificados/ Local onde ficaram os produtos divididos (ex. fotos de varios smartphones) */
+    padding: 0.8em;
+    display: flex;
+    width: 85.375em; 
+    height:40em ;
+    margin: 3.75em;
+    flex-flow: column;
+    position: relative;
+    left: 3em;
+}
+                    
+.fotos2{/* inicil da classe fotos2*//* classe para controlar as fotos dos produtos/ essa casse controla a foto grande da home*/
+    width: 30em;
+    height: 30em;
+    position: relative;
+    right: 4.375em;
+    top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.fotos2 img{
+    height: 26.25em;
+    margin-bottom: 2em;
+}/* fim da classe fotos1*/
+.preco{/* Classe para controlar o preço do produto/ essa classe controla o preço da foto grande da home*/
+    position: relative;
+    right: 18.75em;
+    bottom: 5.625em;
+    background: #f16984;
+    padding: 1em;
+    border-radius: 0.9375em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+.botao{/* Classe que controla o ver mais*/
+    position: relative;
+    margin-bottom: 2em;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #c70399;
+    font-size: 1em;
+    font-weight: bold;
+}
+.footerHome{
+    position: relative;
+    top: 90em;
+}
+.hrHome{
+    position: relative;
+    top: 90em;
+}
+                            
+
+
+/*--------------------- Página Descrição Produto----------------------*/
+.classificacaomain {
+    margin-top: 7.5em;
+}
+#produto {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.not h1 {
+    display: flex;
+    position: absolute;
+    left: 24.875em;
+    top: 7em;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+
+/* Descrição imagens*/
+
+.produto_imagem_geral {
+    border: black;
+    margin: 6.25em;
+}
+
+.foto_1 {
+    display: flex;
+    margin-top: -1.5625em;
+    padding-right: 0.625em;
+}
+
+.foto_2 {
+    display: flex;
+    margin-top: -1.5625em;
+    padding-right: 0.625em;
+}
+
+.foto_3 {
+    display: flex;
+    margin-top: -1.5625em;
+}
+
+.produto_imagem_principal {
+    margin-left: 10.5em;
+}
+
+.produto_imagem_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10em;
+}
+
+.produto_imagem_foto img {
+    height: 5vw;
+    width: 10vh;
+    margin-top: .8em;
+}
+
+.btn {
+    text-align: center;
+    border: black solid 1px;
+    text-decoration: none;
+    margin: 1.1em;
+    border-radius: 0.625em;
+    font-size: 1.9em;
+}
+
+.Btn {
+    text-align: center;
+    border: black solid 1px;
+    text-decoration: none;
+    margin: 1.1em;
+    border-radius: 0.625em;
+    font-size: 1.9em;
+}
+
+
+/*Descrição Titulos*/
+
+.produto_titulo {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 57em;
+    top: 15em;
+}
+
+.produto_titulo p {
+    display: flex;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn_rose {
+    left: 1em;
+    top: 9em;
+    padding: 1.1em;
+    background: #f16984;
+    color: #ffff;
+    font-weight: bold;
+    border-radius: 1.1em;
+    font-size: 1.25em;
+    text-decoration: none;
+    position: absolute;
+}
+
+
+/* Descrições Produtos*/
+
+.corpoanuncio {
+    margin-top: 0;
+    height: 114vh;
+}
+
+.footerProduto{
+    position: relative;
+    top: 65em;
+}
+.hrProduto{
+    position: relative;
+    top: 65em;
+}
+
+
+.corpoanuncio h2 {
+    margin-top: .5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    color: rgb(99, 93, 93);
+    padding-left: 2em;
+}
+
+.corpoanuncio p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    color: black;
+    padding-left: 3em;
+    margin-top: 1.5em;
+    height: 7em;
+}
+
+#tabela_esp {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    margin: .8em 3.125em;
+}
+
+#tabela_esp td {
+    border: 1px solid black;
+    padding: .9em;
+}
+
+.ce {
+    background: #212122c7;
+    color: white;
+}
+
+.cd {
+    background: rgb(175, 175, 175);
+}
+
+
+/*---------------------Login e cadastro---------------------*/
+/* Início da edição do campo de login */
+
+#background {
+    background-image: linear-gradient(rgb(29, 38, 113, 0.8), rgb(92, 225, 230, 0.6), rgb(241, 105, 132, 1)), url('../imagens/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao {
+    /* Edição da div */
+    height: 24.25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_tw {
+    /* Edição da imagem de logo */
+    width: 100vw;
+    max-width: 10vw;
+    margin-top: .5em;
+}
+
+.logo_tw img {
+    /* Edição da imagem de logo */
+    width: 100vw;
+    max-width: 10vw;
+}
+
+.campo {
+    /* Edição da div "pai" */
+    width: 31.25vw;
+    height: 28.125vw;
+    border-color: black;
+    border-style: solid;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.705);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Formulario {
+    /* Edição dos inputs */
+    width: 100vw;
+    max-width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.check {
+    /* Edição do check da pagina "mantenha-me conectado" */
+    width: 100vw;
+    max-width: 25.5vw;
+    display: flex;
+    color: #363636;
+    margin-top: .5em;
+}
+
+.check label,
+input {
+    margin-left: .4em;
+    color: #696969;
+}
+
+.check a {
+    margin-left: 5.5em;
+    text-decoration: none;
+}
+
+.check label,
+a {
+    font-size: .9em;
+}
+
+.check a:hover {
+    color: rgb(192, 18, 192);
+    text-decoration-line: underline;
+    text-decoration-color: rgb(192, 18, 192);
+}
+
+.entre {
+    /* Edição do campo de acesso "entrar"  */
+    padding: 0.56em 6.25em;
+    margin-top: 1.25em;
+    background: #f16984;
+    border-color: #ccc;
+    border-width: 0.09375em;
+    border-style: solid;
+    border-radius: 0.5625em;
+}
+
+.entre a {
+    /* Edição da letra do campo de acesso "entrar"  */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.entre a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+input[type=text] {
+    /* Edição do quadrado do input */
+    width: 100vw;
+    max-width: 25vw;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.0625em solid #808080;
+    background: rgba(0, 0, 0, 0);
+}
+
+.login_admin {
+    padding: 0.5625em 6.25em;
+    margin-top: 0;
+}
+
+.login_admin a {
+    text-decoration: none;
+    color: #696969;
+    font-size: 1.1em;
+    text-shadow: 0.0525em 0 #808080;
+}
+
+.login_admin a:hover {
+    color: #1d2671;
+    text-decoration: #1d2671;
+    text-decoration-line: underline;
+}
+
+.cadastro {
+    padding: 0.5625em 6.25em;
+    margin-top: .5em;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: #696969;
+    font-size: 1.1em;
+    text-shadow: 0.0525em 0 #808080;
+}
+
+.cadastro a:hover {
+    color: #1d2671;
+    text-decoration: #1d2671;
+    text-decoration-line: underline;
+}
+
+
+/* Fim da edição do campo de login */
+
+.logo_thw {
+    width: 100vw;
+    max-width: 10vw;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ----- Início da edição da página de cadastro ---*/
+
+.h1topo h1 {
+    color: #696969;
+}
+
+.logo_twc {
+    /* Edição da imagem de logo */
+    width: 100vw;
+    max-width: 10vw;
+    margin-top: .2em;
+}
+
+.logo_twc img {
+    /* Edição da imagem de logo */
+    width: 100vw;
+    max-width: 10vw;
+}
+
+#formulario {
+    /* Edição dos inputs */
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+#formulario input[name="tNome"] {
+    /* Edição do campo nome */
+    margin-top: 1em;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+#formulario input[name="tSenha"] {
+    /* Edição do campo senha  */
+    margin-top: 0.3125em;
+    margin-bottom: 0.0625em;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+#formulario input[name="tEmail"] {
+    /* Edição do campo email  */
+    margin-top: 0.3125em;
+    margin-bottom: 0.0625em;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+#formulario input[name="tCSenha"] {
+    /* Edição do campo Conf. senha  */
+    margin-top: 0.3125em;
+    margin-bottom: 0.0625em;
+    width: 100vw;
+    max-width: 30vw;
+}
+
+.check2 {
+    /* Edição do check da pagina "mantenha-me conectado" */
+    margin: .3em auto;
+    color: #363636;
+    font-size: 1em;
+    width: 100vw;
+    max-width: 25.5vw;
+    margin-left: 5em;
+}
+
+.campo1 {
+    /* Edição da div "pai" */
+    width: 31.5em;
+    height: 28em;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0.5625em;
+    background: rgba(255, 255, 255, 0.705);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.criar_conta {
+    width: 12.5em;
+    padding: 0.5625em;
+    margin-top: 1em;
+    background: #f16984;
+    border-color: #ccc;
+    border-width: 0.09375;
+    border-style: solid;
+    border-radius: 0.5625em;
+}
+
+.criar_conta a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.criar_conta a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+.termo {
+    font-size: 0.725em;
+    margin-top: 1.7em;
+}
+
+/*-------------Dashboard------------------*/
+.nav{
+    width: 87%;
+    height: 3.40em;
+    float: right;
+    border: 0.01em solid grey;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bar a{
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #1d2671;
+    font-weight: bold;
+}
+.searchbar{
+    margin-left: 2em;
+    margin-right: -10em;
+    width: 80em;
+    
+}
+.searchbar input{
+    width: 40em;
+    height: 3em;
+    box-sizing: border-box;
+    border: 0.09em solid grey;
+    border-radius: 1em;
+    background-color: #f8f8f8;
+    padding-left: 1em;
+}
+.searchbar button{
+    width: 4em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    background: #1d2671;
+    color: white;
+    border-radius: 1em;
+}
+.nav-left{
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    height: 130vh;
+    position: absolute;
+    background-color: white;
+    border: 0.01em solid grey;
+    /* opacity: 0; */
+}
+.nav-left ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+.nav-left a{
+    color: black;
+    font-size: 1.2em;
+    padding: 1em;
+    text-decoration: none;
+}
+.nav-left li:hover a{
+    color: white;
+}
+
+.logo1{
+    display: flex;
+    justify-content: center;   
+}
+
+.logo1 img{
+    height: 50px;
+    width: 180px;
+}
+.nav-left li{
+    padding: .5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-left li:hover{
+    background: #f16984;
+    color: white;
+}
+.dash{
+    color: white;
+    padding: 1em;
+    background: #f16984;
+}
+
+#conteudo_central{
+    
+    width:80vw;
+    height: 120vh;
+    position: absolute;
+    left: 17%;
+    top:10%;
+    padding: 1.5em;
+    border: 2px solid #ccc;
+    border-radius: 3em;
+}
+.dashh2 {
+    font-size: 3em;
+    color: #f16984;
+    padding: 1em;
+}
+.produtos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.produtos button{
+    width: 10em;
+    padding: 1em;
+    font-size: 1.5em;
+    color: white;
+    background: #f16984;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.filtros{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+.filtros p{
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    color: #333333
+}
+.filtros select{
+    width: 10em;
+    height: 2em;
+    padding-right: 1em;
+    border: 2px solid #ccc;
+    border-radius: 3em;
+}
+.filtros input{
+    width: 15em;
+    height: 2em;
+    border: 2px solid #ccc;
+    border-radius: 3em;
+    padding-left: 1em;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+.filtros button{
+    width: 5em; 
+    height: 2.5em;
+    border: 2px solid #ffffff;
+    border-radius: 3em;
+    background: #f16984;
+    color: white;
+}
+.menu_produtos{
+    display: flex;
+    justify-content: column;
+    flex-direction: column;
+
+}
+.barra_produto{
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 2px solid #ccc;
+    border-radius: 3em;
+    width: 73em;
+    display: flex;
+    justify-content: space-between;
+}
+.barra_produto p{
+    font-size: 1em;
+}
+.barra_produto button{
+    width: 5em;
+    height: 2em;
+    border: 1px solid #ffffff;
+    border-radius: 3em;
+    background: #f16984;
+    color: white;
+
+}
+
+/*-------------Respondividade tablet------------------*/
+
+@media screen and (max-width:769px){
+    /*Responsivo Perfil usuário*/
+#menu_superior_perfil {
+    margin-bottom: 0;
+    justify-content: flex-start;
+    height: 10vh;
+}
+
+.BarraPesquisa_perfil {
+    align-items: center;
+    display: flex;
+}
+
+.botao_minhaconta_perfil {
+    display: none;
+}
+
+.minhaconta_sair_perfil li {
+    margin: 0;
+}
+
+#perfil_lateral {
+    max-width: 81vw;
+    position: relative;
+    justify-content: center;
+} 
+               
+    
+.notificacao_perfil {
+    max-width: 100vw;
+    height: 5em;
+    position: absolute;
+    left: 0;
+    top: 37.5em;
+}
+
+.notificacao_conteudo {
+    height: 5em;
+    position: absolute;
+    left: 0;
+    top: 38.9em;
+
+}    
+           
+.perfilmain {
+    margin-top: 7em;
+} /*fim Página perfil usuario notificação*/
+
+#barra_acessibilidade ul{
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+#menu_superior, #menu_inferior{
+    display: none;
+}
+h2{
+    font-size: 2.5em;
+}
+#home_main{
+    width: 100vw;
+    height: 100vh;
+}
+#home_banner img{
+    width: 80vw;
+    height: 35vh;
+    margin: 0 auto;
+}
+#home_banner{
+    width: 90vw;
+    height: 40vh;
+    margin: 0 auto;
+}
+.conteiner{
+    width: 80vw;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.fotos1{
+    width: 80vw;
+    height: 40vh;
+}
+.fotos1 img{
+    width: 18vw;
+}
+.fotos2 {
+    display: none;
+}
+footer, .hrHome{
+    position: relative;
+    top: 27em;
+}
+.valor{
+    right: 9em;
+}
+#img1, #img2{
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto; 
+}
+.campo{
+    width: 80vw;
+    height: 90vw;
+}
+}
+.check{
+    display: inline;
+}
+.check2{
+    display: inline;
+    max-width: none;
+}
+
+
+
+ /*-------Modificação Imagens-------*/
+    
+ .produto_imagem_geral{
+    margin: 0;
+}
+
+.produto_imagem_foto, .produto_imagem_foto img{
+    margin-left: 0;
+    height: 10vw;
+}
+
+.produto_imagem_principal{
+    margin-left: 3em;
+}
+
+/*-------Modificações Tabela-------*/
+
+.corpoanuncio p{
+    text-align: justify;
+    font-size: 1em;
+    max-width: 93vw;
+    height: 20vh;
+}
+
+/*-------Modificando Título-------*/
+
+.produto_titulo{
+    left: 29em;
+    top: 17em;
+}
+
+.produto_titulo p{
+    /* border: #333333 solid 5px; */
+    height: 5vh;
+    width: 32vw;
+}
+
+.not h1{
+    /* border: #333333 solid 5px; */
+    left: 2em;
+    top: 6em;
+    max-width: 80vw;
+}
+ 
+.footerProduto{
+    position: relative;
+    top: 65em;
+}
+.hrProduto{
+    position: relative;
+    top: 65em;
+}
+
+
+
+@media screen and (max-width: 376px){
+    /*Perfil Usario notificaçao*/
+    .logo1 {
+        display: none;
+    }
+
+    .input_buscar_perfil {
+        width: 25vw;
+    }
+
+    #formulario_busca_perfil {
+        width: 78vw;
+    }
+
+    .notificacao_perfil {
+        top: 33.5em;
+        width: 79.9vw;
+        justify-content: center;
+    } 
+
+    .foto_perfil {
+        max-width: 28vw;
+    }
+
+    .foto_perfil img {
+        max-width: 27.7vw;
+    }
+
+    .nome_usuario {
+        font-size: 0.8em;
+    }
+
+    .alterar_foto {
+     display: none;   
+    }/*fim Perfil Usuario Notificação*/
+
+
+#barra_acessibilidade ul{
+        font-size: 1em;
+    }
+.campo{
+        width: 90vw;
+        height: 100vw;
+    }
+.entre{
+    padding: 0.40em 2.25em;
+}
+.entre a{
+    font-size: 1.5em
+}
+.check{
+    max-width: 60vw;
+}
+.cadastro a{
+    font-size: 1em;
+}
+.login_admin a{
+    font-size: 1em;
+}
+.campo1{
+    width: 80vw;
+    height: 70vh;
+}
+.check2{
+    font-size: 0.65em;
+}
+.cadastroTx{
+    text-align: center;
+}
+.valor {
+    right: 1em;
+    top: 1em;
+    font-size: 0.7em;
+}
+.fotos1 img {
+    width: 20vw;
+}
+.texto_rodape {
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+
+
+#produto{
+    height: 98vh;
+}
+
+/*-------Modificações Tabela-------*/
+
+#tabela_esp{
+font-size: 1em;
+max-width:76vw;
+top: 2em;
+}
+
+.corpoanuncio p{
+/* border: #363636 solid 2px; */
+text-align: justify;
+padding-left: 1em;
+font-size: 1em;
+max-width: 96vw;
+height: 43vh;
+}
+
+/*-------Modificação Imagens-------*/
+
+.produto_imagem_principal img{
+/* background: #363636; */
+width: 50vw;
+}
+
+.produto_imagem_foto{
+/* border: #363636 solid 5px; */
+max-width: 80vw;
+}
+
+.produto_imagem_foto img{
+height: 9vh;
+width: 8vh;
+}
+
+.Btn{
+width: 5vw;
+height: 5vh;
+font-size: 1.5em;
+border: black solid 1.5px;
+}
+.btn{
+width: 5vw;
+height: 5vh;
+font-size: 1.5em;
+border: black solid 1.5px;
+}
+
+/*-------Modificando Título-------*/
+
+.produto_titulo{
+left: 1em;
+top: 29em;    
+}
+.not h1{
+left: 1em;
+max-width: 85vw;
+top: 15em;
+font-size: 1em;
+}
+
+.produto_titulo p{
+/* align-items: center; */
+font-size: 1em;
+width: 50vw;
+height: 5vh;
+}
+
+.btn_rose{
+top: 35em;
+padding: 1em;
+font-size: 1em;
+left: 12em;
+/* border: solid 5px black; */
+top: 35em;
+left: 24em;
+} 
+}

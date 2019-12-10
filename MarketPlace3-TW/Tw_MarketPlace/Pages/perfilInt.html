@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Css/body.css">
+    <link rel="stylesheet" href="../Css/perfilInt.css">
+    <script src="../Js/submenu.js"></script>
+    <title>Interesses</title>
+</head>
+<body>
+<header>
+    <!--COMEÇO DO MAIN-->
+    <div class="menu">
+    <section id="barra_acessibilidade">
+        <!--Barra de acessibilidade-->
+        <ul class="barra_conteudo">
+            <li><a href="#">Acessibilidade</a></li>
+            <li><a href="#">A-</a></li>
+            <li><a href="#">A+</a></li>
+            <li><a href="#">Modo Noturno</a></li>
+        </ul>
+    </section>
+    <!--Fim barra de acessibilidade-->
+</div>
+</header>
+
+<!--Menu superior-->
+<section>
+    <nav id="menu_superior">
+        <div class="logo">
+            <a href="../imagens/logo.png"><img src="../imagens/logo.png"
+                    alt="Logo TWmarketplace"></a>
+        </div>
+
+        <div class="BarraPesquisa">
+            <form action="Busca" method="GET" id="formulario_busca">
+                <!--Barra de pesquisa-->
+                <input type="search" name="Busca" class="input_buscar" placeholder="Buscar...">
+                <img id="lupa" src="../imagens/pesquisa.png" alt="Pesquisar">
+            </form>
+        </div>
+
+        <div class="icones_compras_mensagem">
+            <a href="#"><img id="sacola_compras" src="../imagens/028-shopping bags.png"
+                    alt="Sacola de pedidos"></a>
+
+            <a href="#"><img id="mensagens" src="../imagens/message.png" alt="Notificações"></a>
+        </div>
+
+        <div class="minhaconta_sair">
+            <ul>
+                <li><a href="../Editado-Tw/PerfilUsuário_MeusPedidos.html" class="botao_minhaconta">Minha Conta</a></li>
+                <li><a href="../Editado-Tw/login.html" class="botao_sair">Sair</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<!--Fim menu superior-->
+
+<main>
+    <section id="Menu_lateral">
+        <div class="perfil">
+            <img src="../imagens/homem.jpg" alt="Foto perfil usuário">
+        </div>
+
+        <div class="nome_usuario">
+            <p>Cássio Vincent</p>
+        </div>
+    
+        <nav class="conteudo">
+            <ul>
+                <li>
+                    <a href="#">Perfil</a>
+                </li>
+
+                <li> 
+                    <a href="#">Interesses</a>
+                </li>
+
+                <li>
+                    <a href="#">Notificações</a>
+                </li>
+
+                <li>
+                    <a href="#" onClick="abrirSub()">Informações</a>
+                        <ul class="testeUL" onClick="fecharSub()">
+                            <li>
+                                <a href="#">E-mail: adm@gmail.com</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Ramal(ADM): 123</a>
+                            </li>
+                        </ul>
+                </li>
+
+                <li>
+                    <a href="#">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="linhaLa">
+
+    <section id="lateral_direita">
+        <div class="topo_direito">
+            <h1>Interesses</h1>
+        </div>
+        <div class="canto_direito">
+            <ul>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+                <li><a href="#">> Product name  -  productcode:#12121212</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<hr class="hrHome">
+<footer class="footerHome">
+    <img class="logo_thw" src="../imagens/rodape.png" alt="Imagem do Logo da ThougthWorks">
+    <p class="texto_rodape">
+        ThougthWorks MarketPlace © 2019 - Todos os direitos reservados - TWmarketplace.com.br atividades de internet
+        LTDA <br> CNPJ: 99.999.999/9999-99
+        Rua dos Alfineiros, 4, Surrey, Londres, 99999-999 - (11) 9999-9999
+    </p>
+</footer>
+
+</body>
+</html>
