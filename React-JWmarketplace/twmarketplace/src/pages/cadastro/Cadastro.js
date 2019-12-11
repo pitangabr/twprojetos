@@ -80,21 +80,21 @@ atualizaEstado = (event) => {
                                 <input type="password" name="tCSenha" placeholder="Confirmar Senha" size="15" maxlength="20" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
                                 {/* <!-- Input criado para usuário inserir senha dde acesso --> */}
 
-                            <div className="check2">
+                                <div className="check2">
 
-                                <input type="checkbox" id="scales" name="scale"/>
+                                    <input type="checkbox" id="scales" name="scale"/>
 
-                                <label for="scales">Aceito receber novidades do TWMarketPlace</label>
+                                    <label for="scales">Aceito receber novidades do TWMarketPlace</label>
 
-                            </div>
+                                </div>
 
-                            <div className="criar_conta">
-                                <button type = "submit">Criar Conta</button>
-                            </div>
+                                <div className="criar_conta">
+                                    <button type = "submit">Criar Conta</button>
+                                </div>
 
-                            <div className="termo">
-                                <p>Ao clicar em criar conta, você está de acordo com os termos de serviço do TWMarketplace.</p>
-                            </div>
+                                <div className="termo">
+                                    <p>Ao clicar em criar conta, você está de acordo com os termos de serviço do TWMarketplace.</p>
+                                </div>
                             </form>
                         </div>
                         

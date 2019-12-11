@@ -1,0 +1,93 @@
+/*<!--Menu superior-->*/
+
+.menu {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100vw;
+}
+.hr{
+    width: 90vw;
+    margin: 1em 3.5em;
+}
+#menu_superior {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1em;
+    flex-wrap: wrap;
+    background: #fff;
+    height: 14vh;
+    width: 100%;
+}
+.logo img {
+    width: 100vw;
+    max-width: 12em;
+    margin-right: 1.5em;
+    margin-top: .7em;
+}
+.BarraPesquisa {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    margin-right: 2em;
+}
+#formulario_busca {
+    border: solid 0.0625em;
+    border-radius: 0.5em;
+    width: 42vw;
+    height: 6.5vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#formulario_busca img {
+    height: 4.5vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.input_buscar {
+    width: 36vw;
+    height: 5vh;
+    border: none;
+    justify-content: space-around;
+    display: flex;
+    margin-left: 1.7em;
+    font-size: 1.3em;
+}
+#lupa {
+    opacity: 0.5;
+}
+.icones_compras_mensagem img {
+    width: 100vw;
+    max-width: 2em;
+    margin-right: 1em;
+}
+.minhaconta_sair ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+.minhaconta_sair li {
+    margin: auto 1.5em auto auto;
+}
+.minhaconta_sair a:hover {
+    text-decoration: white;
+    text-decoration-line: underline;
+}
+.botao_minhaconta {
+    background: #f16984;
+    padding: .8em;
+    border-radius: 0.9375em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.botao_sair {
+    text-transform: uppercase;
+    color: #f16984;
+}
+        /*<!--Fim menu superior-->*/
