@@ -39,7 +39,7 @@ function MenuSu (){
                             </a>
 
                             <a href="#">
-                                <img id="mensagens" src={("../../assets/img/message.png")} alt="Notificações"/>
+                                <img id="mensagens" src={require("../../assets/img/message.png")} alt="Notificações"/>
                             </a>
 
                         </div>

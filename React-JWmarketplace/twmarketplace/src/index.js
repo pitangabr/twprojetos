@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import App from './App';
+// import App from './App';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 // import Desh from './pages/desh';
 // import DescricaoProduto from './pages/descricaoprodu';
 import NaoEncontrado from './pages/naoencontrado/NaoEncontrado';
 import PerfilAdm from './pages/desh/PerfilAdm';
+import { usuarioAutenticado, parseJwt } from './services/auth';
+
+const PermissaoAdmin = ({component : Component}) =>(
+    <Route
+        render={props =>
+            usuarioAutenticado() && parseJwt().Role === "Administrador" ? (
+                <Component {...props}/>
+            ) : (
+                <Redirect to={{pathname: "/login"}}/>
+            )
+        }
+    />
+)
+
 
 
 const Ways = (

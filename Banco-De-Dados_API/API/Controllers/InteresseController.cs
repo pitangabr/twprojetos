@@ -1,101 +1,67 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using API.Models;
+using Back_End_Completo.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using trabalho.Repositorio;
 
-namespace API.Controllers
+namespace trabalho.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
+
     public class InteresseController : ControllerBase
-    {
-        TWMarketplaceContext context = new TWMarketplaceContext();
+    {    
+        InteresseRepositorio repositorio = new InteresseRepositorio();
 
         [HttpGet]
-        public async Task<ActionResult<List<Interesse>>> Get (){
-            var interesses = await context.Interesse.Include(x => x.IdUsuarioNavigation).Include(y => y.IdProdutoNavigation).ToListAsync();
-
-            if(interesses == null){
-                return NotFound();
-            }
-
-            return interesses;
+        public async Task<ActionResult<List<Interesse>>> Get()
+        {
+           try{
+               return await repositorio.Get();
+           }catch(System.Exception){
+               throw;
+           }
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Interesse>> Get(int id)
+        public async Task<ActionResult<Interesse>> Id(int id)
         {
-            var interesse = await context.Interesse.Include(x => x.IdUsuarioNavigation).Include(y => y.IdProdutoNavigation).FirstOrDefaultAsync(i => i.IdInteresse == id);
-
-            if (interesse == null)
+            Interesse interesseRetornado = await repositorio.Id(id); //Manda buscar a informação no BD (repositório) e após a resposta eu faço a verificação
+            if (interesseRetornado == null)
             {
                 return NotFound();
             }
-
-            return interesse;
+            return interesseRetornado; // Retorno da variável com a resposta do repositório
         }
 
         [HttpPost]
         public async Task<ActionResult<Interesse>> Post(Interesse interesse)
         {
-            try
-            {
-                await context.AddAsync(interesse);
-                await context.SaveChangesAsync();
+            try{
+                interesse.TwmpInteresseCompra = true;
+               return await repositorio.Post(interesse); //Manda cadastrar nformação no BD através do respositório
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                throw;
-            }
-
-            return interesse;
+            catch(System.Exception ex){ // E se houver erro ele mostra qual foi
+               return BadRequest(new{mensagem = "Erro" + ex.Message});//BadRequest Mostra o erro, Mensagem (var) mostra qual foi recebendo o erro da exceção
+           }
         }
-
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(long id, Interesse interesse)
+        public async Task<ActionResult<Interesse>> Put(int id, Interesse interesse)//Definir sempre o tipo de retorno <categoria>
         {
-            if (id != interesse.IdInteresse)
+            Interesse interesseRetornado = await repositorio.Id(id); //buscando informação no banco
+            if (interesseRetornado == null)//verificando se é nulo
             {
-                return BadRequest();
+                return NotFound("Interesse em produto não encontrada");//mensagem de erro
             }
-
-            context.Entry(interesse).State = EntityState.Modified;
-
-            try
-            {
-                await context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                var Interesse_valido = await context.Interesse.FindAsync(id);
-
-                if (Interesse_valido == null)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+           try{
+               return await repositorio.Put(id, interesse);// após a espera do retorno trás a informação de categoria (altera)
+           }
+           catch(System.Exception ex)//cria uma exceção
+           {
+                return BadRequest(new{mensagem = "Erro" + ex.Message});//caso haja erro informa-o
+           }
         }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Interesse>> Delete(int id)
-        {
-            var interesse = await context.Interesse.FindAsync(id);
-            if (interesse == null)
-            {
-                return NotFound();
-            }
-
-            context.Interesse.Remove(interesse);
-            await context.SaveChangesAsync();
-
-            return interesse;
-        }
+  
     }
 }

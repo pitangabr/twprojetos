@@ -4,7 +4,8 @@
     background-image: " linear-gradient(" + " rgb(29,38,113,0.8), rgb(92,225,230,0.6), rgb(241,105,132,1)), url('../imagens/back.jpg" + ")";
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;   
+    height: 100vh;  
+    width: 100vw; 
     display: flex;
     align-items: center;
     justify-content: center;

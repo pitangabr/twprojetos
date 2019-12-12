@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API.Models
+namespace Back_End_Completo.Models
 {
     public partial class Permissao
     {
@@ -13,13 +13,13 @@ namespace API.Models
         }
 
         [Key]
-        [Column("id_permissao")]
-        public int IdPermissao { get; set; }
-        [Column("tipo_Usuario")]
+        [Column("twmp_IdPermissao")]
+        public int TwmpIdPermissao { get; set; }
+        [Column("twmp_TipoUsuario")]
         [StringLength(50)]
-        public string TipoUsuario { get; set; }
+        public string TwmpTipoUsuario { get; set; }
 
-        [InverseProperty("IdPermissaoNavigation")]
+        [InverseProperty("TwmpIdPermissaoNavigation")]
         public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

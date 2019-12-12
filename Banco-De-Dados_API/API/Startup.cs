@@ -10,9 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace API
+namespace Back_End_Completo
 {
     public class Startup
     {
@@ -21,23 +20,12 @@ namespace API
             Configuration = configuration;
         }
 
-        readonly string PermissaoEntreOrigens = "_PermissaoEntreOrigens";
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddNewtonsoftJson(opt =>
-            {
-                opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                opt.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-            });
-
-            services.AddCors (options => {
-                options.AddPolicy (PermissaoEntreOrigens,
-                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            });
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,10 +35,6 @@ namespace API
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseCors(option => option.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

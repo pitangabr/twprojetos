@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API.Models
+namespace Back_End_Completo.Models
 {
     public partial class Interesse
     {
         [Key]
-        [Column("id_interesse")]
-        public int IdInteresse { get; set; }
-        [Column("id_usuario")]
-        public int? IdUsuario { get; set; }
-        [Column("id_produto")]
-        public int? IdProduto { get; set; }
-        [Column("status_Compra")]
-        public bool StatusCompra { get; set; }
+        [Column("twmp_IdInteresse")]
+        public int TwmpIdInteresse { get; set; }
+        [Column("twmp_IdUsuario")]
+        public int? TwmpIdUsuario { get; set; }
+        [Column("twmp_IdProduto")]
+        public int? TwmpIdProduto { get; set; }
+        [Required]
+        [Column("twmp_InteresseCompra")]
+        public bool? TwmpInteresseCompra { get; set; }
+        [Column("twmp_StatusCompra")]
+        public bool TwmpStatusCompra { get; set; }
 
-        [ForeignKey(nameof(IdProduto))]
-        [InverseProperty(nameof(Produtos.Interesse))]
-        public virtual Produtos IdProdutoNavigation { get; set; }
-        [ForeignKey(nameof(IdUsuario))]
+        [ForeignKey(nameof(TwmpIdProduto))]
+        [InverseProperty(nameof(Produto.Interesse))]
+        public virtual Produto TwmpIdProdutoNavigation { get; set; }
+        [ForeignKey(nameof(TwmpIdUsuario))]
         [InverseProperty(nameof(Usuario.Interesse))]
-        public virtual Usuario IdUsuarioNavigation { get; set; }
+        public virtual Usuario TwmpIdUsuarioNavigation { get; set; }
     }
 }

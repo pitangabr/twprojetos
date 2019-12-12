@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API.Models
+namespace Back_End_Completo.Models
 {
     public partial class Categoria
     {
         public Categoria()
         {
-            Produtos = new HashSet<Produtos>();
+            Produto = new HashSet<Produto>();
         }
 
         [Key]
-        [Column("id_categoria")]
-        public int IdCategoria { get; set; }
-        [Column("categoria_Produto")]
+        [Column("twmp_IdCategoria")]
+        public int TwmpIdCategoria { get; set; }
+        [Column("twmp_CategoriaProduto")]
         [StringLength(50)]
-        public string CategoriaProduto { get; set; }
+        public string TwmpCategoriaProduto { get; set; }
 
-        [InverseProperty("IdCategoriaNavigation")]
-        public virtual ICollection<Produtos> Produtos { get; set; }
+        [InverseProperty("TwmpIdCategoriaNavigation")]
+        public virtual ICollection<Produto> Produto { get; set; }
     }
 }

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import '../../assets/style/Login.css';
+
 import Acessibilidade from '../../components/barraAcessibilidade/Acessibilidade.js';
+import {parseJwt} from '../../services/auth'
+import api from '../../services/Api';
+
 
 class Login extends Component {
 
@@ -8,27 +12,62 @@ class Login extends Component {
         super ();
         this.state = {
             email:"",
-            senha:""
+            senha:"",
+            erroMensagem: "",
+            isLoading: false,
+            api: ""
         }
-    //     this.loginUsuario = this.loginUsuario.bind(this);
-    // }
+        this.loginUsuario = this.loginUsuario.bind(this);
+    }
 
-    // loginUsuario = (event) => {
-    //     this.setState({[event.target.name]: event.target.value});
-    // }
+    loginUsuario = (event) => {
+        this.setState({[event.target.name]: event.target.value});
+    }
 
-    // realizarLogin(event){
-    //     event.preventDefault();
+    realizarLogin(event){
+        event.preventDefault();
 
-    //     this.setState({erroMensagem: ''})
-    //     this.setState({isLoading: true})
+        this.setState({erroMensagem: ''})
+        this.setState({isLoading: true})
 
-    //     let usuario = {
-    //         email: this.state.email,
-    //         senha: this.state.senha
-    //     }
+        let usuario = {
+            email: this.state.email,
+            senha: this.state.senha
+        }
+            console.log(usuario);
+       
+            api.post ("/login", usuario)
+            .then(response => {
+            if(response.status === 200) {
+                localStorage.setItem('usuario-Tw', response.data.token)
+                this.setState({isLoading : false})
 
-    //     api
+                console.log ("Meu token é: "+ response.data.token)
+
+                var base64 = localStorage.getItem('usuario-Tw').split('.')[1]
+                console.log(base64)
+
+                console.log (window.atob(base64))
+
+                console.log(JSON.parse(window.atob(base64)))
+
+                console.log (parseJwt().Role)
+
+                if (parseJwt().Role === 'Administrador') {
+                    this.props.history.push('/cadastro');
+                }
+                else{
+                    this.props.history.push('/login')
+                }
+            }
+        })
+
+        .catch(erro => {
+            console.log("Erro:" , erro)
+            this.setState({erroMensagem : 'E-mail ou senha inválido!'})
+            this.setState({isLoading : false})
+        })
+        
     }
     
                     // {/* ------------------Login--------------- */}
@@ -36,7 +75,6 @@ class Login extends Component {
         return (
             <div>
                 <Acessibilidade/>
-
                 <main className="loginmain">
 
                     <section id="background">
@@ -53,13 +91,13 @@ class Login extends Component {
                                     {  /* <!-- Div para imagem dentro do campo de login --> */}
                                 </div>
 
-                                <form className="Formulario">
+                                <form className="Formulario" >
                                 {/* <!-- Tag criada para criar formulário --> */}
 
-                                    <input type="name" name="tNome" id="iNome" placeholder="Email" size="15" maxlength="20"required="required"/> 
+                                    <input type="name" name="email" id="iNome" placeholder="Email" size="15" required="required" value = {this.state.email} onChange = {this.loginUsuario}/> 
                                     {/* <!-- Input criado para usuário inserir o nome para acesso --> */}
 
-                                    <input type="password" name="tSenha" placeholder="Senha" size="15" maxlength="20"required="required"/> 
+                                    <input type="password" name="senha" placeholder="Senha" size="15" maxlength="60" required="required" value = {this.state.senha} onChange = {this.loginUsuario}/> 
                                     {/* <!-- Input criado para usuário inserir senha dde acesso --> */}
                                 </form>
 
@@ -71,7 +109,7 @@ class Login extends Component {
                                 </div>
 
                                 <div className="entre">
-                                    <a href="../Editado-Tw/index.html">Entrar</a>
+                                    <button onClick={this.realizarLogin.bind(this)} type = "submit">Entrar</button>
                                 </div>
 
                                 <div className="cadastro">
