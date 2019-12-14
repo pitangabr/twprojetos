@@ -42,59 +42,44 @@
     flex-direction: column;
 }
 
-.Formulario{ /* Edição dos inputs */ 
+.Formulario2 { /* Edição dos inputs */ 
     width: 100vw;
     max-width: 25vw;
     display: flex;
     flex-direction: column;
-    top: 3em;
+    top: 2em;
 }
 
-.check{ /* Edição do check da pagina "mantenha-me conectado" */ 
-    width: 100vw;
+/* Edição do check da pagina "mantenha-me conectado" */
+/* .check3{   */
+    /* width: 100vw;
     max-width: 25.5vw;
     display: flex;
     color: 	#363636;
     margin-top: .5em;
 }
 
-.check label, input{
+.check3 label, input{
     margin-left: .4em;
     color: 	#696969;
 }
 
-.check a{
-    margin-left: 5.5em;
+.check3 a{
+    margin-left: 7em;
     text-decoration: none;
 }
 
-.check label, a{
+.check3 label, a{
     font-size: .8em;
 }
 
-.check a:hover{
+.check3 a:hover{
     color: rgb(192, 18, 192);
     text-decoration-line: underline;
     text-decoration-color: rgb(192, 18, 192);
-}
+} */
 
-.entre{ /* Edição do campo de acesso "entrar"  */
-    padding: 0.56em 6.25em;
-    margin-top: 1.25em;
-    background: #f16984;
-    border-color: #ccc;
-    border-width: 0.09375em;
-    border-style: solid;
-    border-radius: 0.5625em;
-}
-.entre a{ /* Edição da letra do campo de acesso "entrar"  */
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.entre a:hover{
+.entre1 a:hover{
     text-decoration-line: underline;
     text-decoration-color: white;
 }
@@ -109,6 +94,10 @@ input[type=text] { /* Edição do quadrado do input */
     border-bottom: 0.0625em solid #808080;
     background: rgba(0,0,0,0);
     margin-top: 2em;
+}
+
+.entre1{ /* Edição do campo de acesso "entrar"  */
+    padding: 0.56em 6.25em;
 }
 
 .login_admin{

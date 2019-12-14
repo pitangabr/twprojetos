@@ -1,13 +1,3 @@
-import React, { Component } from 'react';
-import '../../assets/style/PerfilAdm.css';
-
-import Acessibilidade from '../../components/barraAcessibilidade/Acessibilidade';
-import Rodape from '../../components/footer/Rodape';
-import MenuS from '../../components/menuSupe/MenuS';
-import MenuLateralD from '../../components/menudash/MenuLEs';
-
-
-
 class PerfilAdm extends Component {
 
     constructor() {
@@ -17,56 +7,58 @@ class PerfilAdm extends Component {
             email: "",
             senha: "",
             usuarios: [],
-            admin: {}
+            admin: "",
+            listaUsuarios: ""
         }
         this.BuscarAdm = this.BuscarAdm.bind(this);
-        this.filtrarAdm = this.filtrarAdm.bind(this);
+        this.camposet = this.camposet.bind(this);
+
     }
         // Execulta o componente criado
         componentDidMount (){
-            this.BuscarAdm ()
+            this.BuscarAdm();
         }
 
-        BuscarAdm(){
-        console.log("teste");
+        camposet(event) { // botão de definição dos setState para função buscar admim abaixo
+            this.setState({
+                nome: event.target.value,
+                email: event.target.value,
+                senha: event.target.value
+            })
+        }
 
-        fetch('http://localhost:5000/api/Usuario', {
-            headers: {
-                "Content-Type" : "application/json" 
-            }
-        })
+        // método get
+        async BuscarAdm() { 
+            await fetch('http://localhost:5000/api/usuario')
+            // Executa 
+            .then(Response =>Response.json())
+            .then(data => this.setState({listaUsuarios: data}))
+            .catch(error => console.error(error))
 
-        // Execulta 
-        .then(Response =>Response.json())
-        .then(data => this.setState({usuarios: data}))
-        .then(this.filtrarAdm)
-        .catch(error => console.error(error));
-    }
-
-    filtrarAdm (){
-        console.log(this.state.usuarios);
-
-        this.state.usuarios.map(usuario => {
-            if(usuario.idPermissao == 1){
-                this.setState({admin: usuario})
-                console.log(this.state.admin)
-            }
-        })
-    }
+            console.log(this.state.listaUsuarios)
+                       
+            this.setState({nome: this.state.listaUsuarios.nome})
+            this.setState({email: this.state.listaUsuarios.email})
+            this.setState({senha: this.state.listaUsuarios.senha})         
+            }  
+        }
 
     render() {
+            
         return (
           
             <div className = "CorpoTodo">
                 <Acessibilidade/>
-            <MenuS/>
+                {/* <MenuS/> */}
+                
                     <div class="conteudoCentral">
-                        <MenuLateralD/>
+                            {/* <MenuEs/> */}
                         <div className="infoUser">
                             <section className="conteudo">
-                                <div className = "titu">
-                                    <h1> Perfil do Administrador </h1>
-                                    <hr/>
+
+                                <h1> Perfil do Administrador </h1>
+                                <div class="separador">
+                                    <hr size="1" color="#D3D3D3"/>
                                 </div>
 
                                 <div id="info">
@@ -90,7 +82,5 @@ class PerfilAdm extends Component {
                         <Rodape/>
             </div>
         );
-    }
-}
-
+        }
 export default PerfilAdm;

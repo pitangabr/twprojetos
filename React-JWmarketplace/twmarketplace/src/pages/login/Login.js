@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../../assets/style/Login.css';
 
 import Acessibilidade from '../../components/barraAcessibilidade/Acessibilidade.js';
-import {parseJwt} from '../../services/auth'
+import { parseJwt } from '../../services/auth'
 import api from '../../services/Api';
 
 
 class Login extends Component {
 
-    constructor () {
-        super ();
+    constructor() {
+        super();
         this.state = {
-            email:"",
-            senha:"",
+            email: "",
+            senha: "",
             erroMensagem: "",
-            isLoading: false,
-            api: ""
+            isLoading: false
+
         }
         this.loginUsuario = this.loginUsuario.bind(this);
     }
@@ -31,12 +31,12 @@ class Login extends Component {
         this.setState({isLoading: true})
 
         let usuario = {
-            email: this.state.email,
-            senha: this.state.senha
+            twmp_email: this.state.email,
+            twmp_senha: this.state.senha
         }
             console.log(usuario);
        
-            api.post ("/login", usuario)
+            api.post ("http://localhost:5000/api/usuario", usuario)
             .then(response => {
             if(response.status === 200) {
                 localStorage.setItem('usuario-Tw', response.data.token)
@@ -54,10 +54,10 @@ class Login extends Component {
                 console.log (parseJwt().Role)
 
                 if (parseJwt().Role === 'Administrador') {
-                    this.props.history.push('/cadastro');
+                    this.props.history.push('/PerfilAdm');
                 }
                 else{
-                    this.props.history.push('/login')
+                    this.props.history.push('/cadastro')
                 }
             }
         })
@@ -91,24 +91,21 @@ class Login extends Component {
                                     {  /* <!-- Div para imagem dentro do campo de login --> */}
                                 </div>
 
-                                <form className="Formulario" >
+                                <form className="Formulario2" >
                                 {/* <!-- Tag criada para criar formulário --> */}
 
-                                    <input type="name" name="email" id="iNome" placeholder="Email" size="15" required="required" value = {this.state.email} onChange = {this.loginUsuario}/> 
+                                    <input type="name" name="email" id="iNome" placeholder="Email" size="15" required="required"  onChange = {this.loginUsuario}/> 
                                     {/* <!-- Input criado para usuário inserir o nome para acesso --> */}
 
-                                    <input type="password" name="senha" placeholder="Senha" size="15" maxlength="60" required="required" value = {this.state.senha} onChange = {this.loginUsuario}/> 
+                                    <input type="password" name="senha" placeholder="Senha" size="15" maxlength="60" required="required"  onChange = {this.loginUsuario}/> 
                                     {/* <!-- Input criado para usuário inserir senha dde acesso --> */}
                                 </form>
 
-                                <div className="check">
-
-                                    <input type="checkbox" id="scales" name="scale"/>
-                                    <label for="scales">Mantenha-me Conectado</label>
+                                <div className="check3">
                                     <a href="#">Esqueci a Senha</a>
                                 </div>
 
-                                <div className="entre">
+                                <div className="entre1">
                                     <button onClick={this.realizarLogin.bind(this)} type = "submit">Entrar</button>
                                 </div>
 

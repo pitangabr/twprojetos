@@ -20,12 +20,19 @@ namespace Back_End_Completo
             Configuration = configuration;
         }
 
+        readonly string PermissaoEntreOrigens = "_PermissaoEntreOrigens";
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors (options => {
+                options.AddPolicy (PermissaoEntreOrigens,
+                    builder => builder.AllowAnyOrigin ().AllowAnyMethod ().AllowAnyHeader ());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +42,11 @@ namespace Back_End_Completo
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors (option => option.AllowAnyOrigin ()
+                .AllowAnyMethod ()
+                .AllowAnyHeader ());
+            app.UseStaticFiles (); // For the wwwroot folder
 
             app.UseHttpsRedirection();
 

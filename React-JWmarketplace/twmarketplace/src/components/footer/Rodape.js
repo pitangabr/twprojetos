@@ -6,7 +6,6 @@ function Rodape () {
     return (
         <div>
             <hr className="hrHome" />
-
             <footer className="footerHome">
                 <img className="logo_thw" src= {require("../../assets/img/logor.png")} alt="Imagem do Logo da ThougthWorks"/>
                 <p className="texto_rodape">

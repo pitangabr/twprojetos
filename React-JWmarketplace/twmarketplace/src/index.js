@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {Route,Redirect, BrowserRouter as Router, Switch} from 'react-router-dom';
 // import App from './App';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';

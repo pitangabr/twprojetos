@@ -7,9 +7,9 @@ class Cadastro extends Component {
 constructor (){
     super();
     this.state = {
-        nome:"",
-        email: "",
-        senha: ""
+        Nome:"",
+        Email: "",
+        Senha: ""
     }
     this.cadastrarUsuario = this.cadastrarUsuario.bind(this);
 }
@@ -20,7 +20,7 @@ cadastrarUsuario(event){//Event faz funcionar a função.
     console.log("Cadastrando");//Mostrar o que está acontecendo
 
     //Caminho de pega as informações da API
-    fetch('http://localhost:5000/api/Usuario',{ 
+    fetch('http://localhost:5000/api/usuario',{ 
 
         //Estrutura do código, sempre tem que ter
         method: "POST", //Qual metedo vai usar
@@ -28,8 +28,8 @@ cadastrarUsuario(event){//Event faz funcionar a função.
         //O tipo, Tipo JSON e dentro da os nomes das variaveis
         //HEADERS, Refoço que é do tipo JSON
         body: JSON.stringify({nome: this.state.nome, 
-                              email: this.state.email,
-                              senha: this.state.senha}),
+                              Email: this.state.email,
+                              Senha: this.state.enha}),
         headers: {
             "Content-Type" : "application/json" 
         }
@@ -68,25 +68,17 @@ atualizaEstado = (event) => {
                             <form id="formulario" onSubmit = {this.cadastrarUsuario}>
 
                                 {/* <!-- Tag criada para criar formulário --> */}
-                                <input type="nome" name="nome" id="iNome" placeholder="Nome" size="15" maxlength="20" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
+                                <input type="nome" name="nome" id="iNome" placeholder="Nome" size="15" maxlength="50" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
                                 {/* <!-- Input criado para usuário inserir o nome para acesso --> */}
 
-                                <input type="email" name="email" id="iEmail" placeholder="Email" size="15" maxlength="20" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
+                                <input type="email" name="email" id="iEmail" placeholder="Email" size="15" maxlength="50" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
                                 {/* <!-- Input criado para usuário inserir o email para acesso --> */}
 
-                                <input type="password" name="senha" placeholder="Senha" size="15" maxlength="20" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
+                                <input type="password" name="senha" placeholder="Senha" size="15" maxlength="50" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
                                 {/* <!-- Input criado para usuário inserir senha dde acesso --> */}
 
-                                <input type="password" name="tCSenha" placeholder="Confirmar Senha" size="15" maxlength="20" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
+                                <input type="password" name="tCSenha" placeholder="Confirmar Senha" size="15" maxlength="50" required="required" onChange = {this.atualizaEstado.bind(this)}/> 
                                 {/* <!-- Input criado para usuário inserir senha dde acesso --> */}
-
-                                <div className="check2">
-
-                                    <input type="checkbox" id="scales" name="scale"/>
-
-                                    <label for="scales">Aceito receber novidades do TWMarketPlace</label>
-
-                                </div>
 
                                 <div className="criar_conta">
                                     <button type = "submit">Criar Conta</button>
