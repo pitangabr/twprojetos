@@ -4,37 +4,48 @@ import '../../assets/components/MenuDash.css';
 function MenuLateralD (){
     return(
         <div>
-            <aside id="menuDash">
-                
-                <div className="fixoMenu1">Navegação</div>
+             {/* <!--INICIO MENU LATERAL--> */}
 
-                    <div  className="mfc">
-                        <button>Perfil</button>
+             <main>
+                <section id="Menu_lateral">
+
+                    <div class="nome_usuario">
+                        <p>Carlos Eduardo</p>
                     </div>
+        
+                    <nav class="conteudo">
+                        <ul>
+                            <h3>NAVEGAÇÃO</h3>
+                                <li>
+                                    <a href="#">Perfil</a>
+                                </li>
 
-                    <div className="mfc">
-                        <button >Produtos</button>
-                    </div>
+                                <li> 
+                                    <a href="#">Interesses</a>
+                                </li>
 
-                    <div className="mfc">
-                        <button>Notificações</button>
-                    </div>
+                                <li>
+                                    <a href="#">Notificações</a>
+                                </li>
 
-                    <div className="mfc">
-                        <button>Interessados</button>
-                    </div>
+                                <li>
+                                    <a href="#">Notificações</a>
+                                </li>
 
-                <div className="fixoMenu1">Usuários</div>
+                            <h3>USUÁRIOS</h3>
 
-                    <div className="mfc">
-                        <button>Novos cadastros</button>
-                    </div>
+                                <li>
+                                    <a href="#">Cadastrar Usuários</a>
+                                </li>
 
-                    <div className="mfc">
-                        <button>Lista Usuários</button>
-                    </div>
-
-            </aside>
+                                <li>
+                                    <a href="#">Listar Usuários</a>
+                                </li>
+                        </ul>
+                    </nav>
+                </section>
+                {/* <hr class="linhaLa"/> */}
+            </main>
         </div>
     );
 }
