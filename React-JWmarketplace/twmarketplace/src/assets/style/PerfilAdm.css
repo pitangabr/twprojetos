@@ -1,60 +1,27 @@
 
-.conteudoCentral{ /* Div principal da section (quadrado) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: auto;
-    margin-top: 50px;
-    background-color: #ccc;
-    width: 70vw;
-    height: 90vh;
-    border-radius: 15px;
-    box-shadow: inset 0 0 1em white, 0 0 1em #D3D3D3;
-}
-
-.titu h1{ /* Texto principal da section */
-    color: #f16984;
-    font-size: 30px;
-    margin-left: -11em;
-}
-hr{
-    width: 68vw;
-    margin-left: -22em;
-}
-
-/* ------- Edição do campo de informações ----------- */
 #info{ /* Div que contém todo o formulário */
-    width: 50%;
-    float: left;
+    width: 60%;
     position: relative;
-    left: 50px;
-    /* top: -500px; */
+    left: 410px;
+    top: -304px;
  }
+ 
  /* ----- Edição dos inputs do campo de inserção ----- */
  #form1{
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
+     margin-left: 60px;
+     margin-top: -10px;
      width: 40vw;
      color: #f16984;
      font-weight: bold;
      flex-direction: column;
-     margin-left: 225px;
  }
- input[type=text] {
-    max-width: 25vw;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 0.0625em solid #808080;
-    background: rgba(0,0,0,0);
- }
+ 
  #box-form{
      display: flex;
-     justify-content: center;
-     align-items: center;
      height: 55vh;
      width: 55vw;
-     margin-left: -200px;
  }
  
  .nomeUser{
@@ -83,6 +50,16 @@ hr{
  /*---- Fim do campo de inserção ------ */
  
  /* ------- Edição do campo de altração de e-mail div: Form2------ */
+ #form2{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 60px;
+    margin-top: -10px;
+    width: 40vw;
+    color: #f16984;
+    font-weight: bold;
+    flex-direction: column;
+ }
  
  #alterEmail{ /* -- Edição da Label - campo de identificação --- */
      display: flex;
@@ -93,7 +70,19 @@ hr{
      font-weight: bold;
  }
  
- /* -- Edição da Label - campo de identificação --- */
+ #eMail{ /* -- Edição da Label - campo de identificação --- */
+     position: relative;
+     top: -400px;
+     left: 190px;
+ }
+ 
+ .alterarSenha{
+    border-radius: 8px;
+    border: 1px solid 	#C0C0C0;
+    box-shadow: 10px 5px 5px #DCDCDC;  
+    width: 20vw;  
+    margin-top: -50px;
+ }
  
  .confSenha{
     border-radius: 8px;
@@ -129,4 +118,16 @@ hr{
      align-content: center;
      margin: auto;
  }
+ input[type=text] {
+    width: 100vw;
+    max-width: 25vw;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.0625em solid #808080;
+    background: rgba(0,0,0,0);
+}
+
+
  

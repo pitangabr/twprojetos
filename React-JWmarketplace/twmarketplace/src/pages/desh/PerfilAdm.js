@@ -56,41 +56,43 @@ class PerfilAdm extends Component {
 
     render() {
         return (
-          
-            <div className = "CorpoTodo">
+            <div>
                 <Acessibilidade/>
-            <MenuS/>
-                    <div class="conteudoCentral">
-                        <MenuLateralD/>
-                        <div className="infoUser">
-                            <section className="conteudo">
-                                <div className = "titu">
-                                    <h1> Perfil do Administrador </h1>
-                                    <hr/>
+                <MenuS/>
+                <MenuLateralD/>
+                <div className="infoUser">
+                        <div id="info">
+                            <form id="box-form">
+                                <div id="form1">
+                                    <label>Nome:</label>
+                                    <input type="text" name="nomeCompleto" className="nomeUser" placeholder=" Nome Completo"/> 
+                                    
+                                    <label>Alterar E-mail:</label>
+                                    <input type="text" name="alterEmail" className="emailUser" placeholder=" Insira uma nova senha"/>
+                
+                                    <label>Confirme seu E-mail:</label>
+                                    <input type="text" name="alterConfEmail" className="cEmailUser" placeholder=" Confirme  sua senha"/>
                                 </div>
-
-                                <div id="info">
-
-                                    <form id="box-form">
-                                        <div id="form1">
-                                            <label>Nome:</label>
-                                            <input type="text" name="nome" value={this.state.admin.nome} className="nomeUser" placeholder=" Nome Completo" />
-
-                                            <label>E-mail:</label>
-                                            <input type="text" name="email" value={this.state.admin.email} className="cEmailUser"  placeholder="Seu Email" />
-
-                                            <label>Senha:</label>
-                                            <input type="text" name="senha" value={this.state.admin.senha} className="confSenha" placeholder="Sua senha" />
-                                        </div>
-                                    </form>
+                                
+                                <div id="form2">
+                                                                    
+                                    <label id="idEmail">Alterar Senha:</label>
+                                    <input type="text" name="senhaUser" className="alterarSenha" placeholder=" Insira um novo e-mail"/>
+                                    
+                                    <label id="idConfEmail">Confirme sua Senha:</label>
+                                    <input type="text" name="confirsenha" className="confSenha" placeholder=" Confirme seu e-mail"/>
+                                    
+                                    <div className="botaofinal">
+                                        <button className="btnFinal"><p>Atualizar</p></button>
+                                    </div>
                                 </div>
-                            </section>
-                            </div>
+                            </form>
                         </div>
-                        <Rodape/>
-            </div>
+                    <Rodape/>
+                </div> 
+            </div>   
         );
     }
-}
+}    
 
 export default PerfilAdm;

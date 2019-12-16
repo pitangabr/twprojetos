@@ -4,47 +4,46 @@ import '../../assets/components/MenuDash.css';
 function MenuLateralD (){
     return(
         <div>
-             {/* <!--INICIO MENU LATERAL--> */}
-
-             <main>
-                <section id="Menu_lateral">
-
-                    <div class="nome_usuario">
-                        <p>Carlos Eduardo</p>
+             <main id="perfilmain">
+                <section id="menu_lateral_esquerdo">
+                    <div class="perfil">
+                        <div class="nome_usuario">
+                            <p>Carlos Eduardo</p>
+                        </div>
                     </div>
-        
-                    <nav class="conteudo">
-                        <ul>
-                            <h3>NAVEGAÇÃO</h3>
-                                <li>
-                                    <a href="#">Perfil</a>
-                                </li>
+                    <ul>
+                        <li>
+                            <a href="#">Perfil</a>
+                        </li>
 
-                                <li> 
-                                    <a href="#">Interesses</a>
-                                </li>
+                        <li>
+                            <a href="#">Interesses</a>
+                        </li>
 
-                                <li>
-                                    <a href="#">Notificações</a>
-                                </li>
+                        <li>
+                            <a href="#">Notificações</a>
+                        </li>
 
-                                <li>
-                                    <a href="#">Notificações</a>
-                                </li>
+                        <li>
+                            <a href="#">Produtos</a>
+                        </li>
 
-                            <h3>USUÁRIOS</h3>
+                        <li className= "tabulatura">USUÁRIOS</li>
+                        <li>
+                            <a href="#">Novos Cadastros</a>
+                        </li>
 
-                                <li>
-                                    <a href="#">Cadastrar Usuários</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Listar Usuários</a>
-                                </li>
-                        </ul>
-                    </nav>
+                        <li>
+                            <a href="#">Lista de usuários</a>
+                        </li>
+                    </ul>
                 </section>
-                {/* <hr class="linhaLa"/> */}
+
+                <section id="lateral_direita">
+                    <div class="topo_direito">
+                        <h1>Perfil do Administrador</h1>
+                    </div>
+                </section>
             </main>
         </div>
     );

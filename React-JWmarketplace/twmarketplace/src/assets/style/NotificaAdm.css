@@ -1,0 +1,41 @@
+       
+        /*--------------------Corpo lado Direito----------------------*/
+        /*--------------------------Pedidos---------------------------*/
+
+.canto_direito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: -20em;
+    margin-left: 24em;
+    width: 81.3vw;
+    max-width: 85vw;
+    height: 100vh;
+}
+
+.canto_direito li{
+    border-bottom: 1px solid #ccc;
+    width: 80vw;
+    padding: 1em;
+    list-style: inside;
+}
+
+.canto_direito a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.canto_direito li:hover {
+    background-color: #f16984;
+    list-style-type: square;
+    color: white;
+}
+
+.canto_direito li:hover a{
+    color: white;
+    text-decoration: white;
+    text-decoration-line: underline;
+}

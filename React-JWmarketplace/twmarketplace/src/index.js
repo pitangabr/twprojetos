@@ -10,6 +10,7 @@ import Cadastro from './pages/cadastro/Cadastro';
 // import DescricaoProduto from './pages/descricaoprodu';
 import NaoEncontrado from './pages/naoencontrado/NaoEncontrado';
 import PerfilAdm from './pages/desh/PerfilAdm';
+import NotifiAdm from './pages/desh/NotifiAdm';
 import { usuarioAutenticado, parseJwt } from './services/auth';
 
 const PermissaoAdmin = ({component : Component}) =>(
@@ -35,6 +36,7 @@ const Ways = (
                 <Route path = "/cadastro" component = {Cadastro}/>
                 {/* <Route path = "/desh" component = {Desh}/> */}
                 <Route path = "/perfiladm" component = {PerfilAdm}/>
+                <Route path = "/NotifiAdm" component = {NotifiAdm}/>
                 {/* <Route path = "/descricaoproduto" component = {DescricaoProduto}/> */}
                 <Route component = {NaoEncontrado}/>
             </Switch>

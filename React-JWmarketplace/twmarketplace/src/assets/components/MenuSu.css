@@ -20,6 +20,8 @@
     background: #fff;
     height: 14vh;
     width: 100%;
+    top: 3em;
+    z-index: 1;
 }
 .logo img {
     width: 100vw;
