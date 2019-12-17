@@ -10,7 +10,8 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 // import Desh from './pages/desh';
 // import PerfilUsuario from './pages/perfilusuario';
 // import DescricaoProduto from './pages/descricaoprodu';
-import Home from './pages/Home/home';
+// import Home from './pages/Home/home';
+import PerfilAdm from './pages/ADM/PerfilAdm';
 import NaoEncontrado from './pages/naoencontrado/NaoEncontrado';
 import adm from './pages/ADM/adm';
 
@@ -24,6 +25,7 @@ const Ways = (
                 <Route path = "/desh" component = {Desh}/>
                 <Route path = "/perfilusuario" component = {PerfilUsuario}/>
                 <Route path = "/descricaoproduto" component = {DescricaoProduto}/> */}
+                <Route path = "/PerfilNotificacao" component = {PerfilAdm}/>
                 <Route component = {NaoEncontrado}/>
             </Switch>
         </div>
